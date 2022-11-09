@@ -1,6 +1,6 @@
 use('commerce')
 
-db.produtos.updateMany(
-  {},
-  { $rename: { descricao: 'descricaoSite' }}
+db.produtos.updateOne(
+  { nome: 'Big Mac'},
+  { $unset: { curtidas: '' }}
 );
